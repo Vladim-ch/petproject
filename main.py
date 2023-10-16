@@ -25,12 +25,18 @@ def main():
     running = True
 
     while running:
+        clock.tick(FPS) # указываем ограничение FPS
+        
+        # Выход из окна игры
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
-
+                
+        # Рендер цвета фона 
         screen.fill(BLACK)
         pygame.display.flip()
+
+        
 
 
 if __name__ == '__main__':
